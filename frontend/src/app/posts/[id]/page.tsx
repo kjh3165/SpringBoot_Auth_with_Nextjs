@@ -1,12 +1,15 @@
 'use client'
 
 import { apiFetch } from '@/lib/backend/client'
-import { PostCommentDto, PostDto } from '@/types/post'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { use, useEffect, useState } from 'react'
+import { components } from '../../../lib/backend/apiV1/schema.d'
 
 export default function Page({ params }: { params: Promise<{ id: number }> }) {
+    type PostDto = components['schemas']['PostDto']
+    type PostCommentDto = components['schemas']['PostCommentDto']
+
     const { id } = use(params)
 
     const [post, setPost] = useState<PostDto | null>(null)
