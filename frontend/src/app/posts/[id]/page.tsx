@@ -95,7 +95,21 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
         setPost(res.data)
       })
 
-    apiFetch(`/api/v1/posts/${id}/comments`).then(setPostComments)
+    client
+      .GET('/api/v1/posts/{postId}/comments', {
+        params: {
+          path: {
+            postId: id,
+          },
+        },
+      })
+      .then((res) => {
+        if (res.error) {
+          alert(res.error.msg)
+          return
+        }
+        setPostComments(res.data)
+      })
   }, [id])
 
   if (post === null) return <div>로딩중...</div>
