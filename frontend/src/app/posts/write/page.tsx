@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 
-import { apiFetch } from '@/lib/backend/client'
+import { client } from '@/lib/backend/client'
 
 export default function Page() {
   const router = useRouter()
@@ -29,16 +29,22 @@ export default function Page() {
       return
     }
 
-    apiFetch(`/api/v1/posts`, {
-      method: 'POST',
-      body: JSON.stringify({
-        title: titleInput.value,
-        content: contentInput.value,
-      }),
-    }).then((res) => {
-      alert(res.msg)
-      router.replace(`/posts/${res.data.id}`)
-    })
+    client
+      .POST('/api/v1/posts', {
+        body: {
+          title: titleInput.value,
+          content: contentInput.value,
+        },
+      })
+      .then((res) => {
+        if (res.error) {
+          alert(res.error.msg)
+          return
+        }
+
+        alert(res.data.msg)
+        router.replace(`/posts/${res.data.data.id}`)
+      })
   }
 
   return (
