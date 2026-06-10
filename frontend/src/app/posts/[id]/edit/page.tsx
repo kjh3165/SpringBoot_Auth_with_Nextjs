@@ -52,7 +52,7 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
 
   useEffect(() => {
     apiFetch(`/api/v1/posts/${id}`).then(setPost)
-  }, [])
+  }, [id])
 
   if (post === null) return <div>로딩중...</div>
 
