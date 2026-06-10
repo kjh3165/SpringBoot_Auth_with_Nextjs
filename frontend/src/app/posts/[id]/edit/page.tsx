@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { use, useEffect, useState } from 'react'
 
 export default function Page({ params }: { params: Promise<{ id: number }> }) {
-    type PostDto = components['schemas']['PostDto']
+    type PostDto = components['schemas']['PostWithAuthorDto']
 
     const { id } = use(params)
     const [post, setPost] = useState<PostDto | null>(null)

@@ -7,7 +7,7 @@ import { use, useEffect, useState } from 'react'
 import { components } from '../../../lib/backend/apiV1/schema.d'
 
 export default function Page({ params }: { params: Promise<{ id: number }> }) {
-    type PostDto = components['schemas']['PostDto']
+    type PostDto = components['schemas']['PostWithAuthorDto']
     type PostCommentDto = components['schemas']['PostCommentDto']
 
     const { id } = use(params)
