@@ -3,6 +3,7 @@ package com.restapi.domain.post.post.controller;
 import com.restapi.domain.member.member.entity.Member;
 import com.restapi.domain.post.post.dto.PostDto;
 import com.restapi.domain.post.post.dto.PostModifyReqBody;
+import com.restapi.domain.post.post.dto.PostWithAuthorDto;
 import com.restapi.domain.post.post.dto.PostWriteReqBody;
 import com.restapi.domain.post.post.entity.Post;
 import com.restapi.domain.post.post.service.PostService;
@@ -32,21 +33,21 @@ public class ApiV1PostController {
     @Transactional(readOnly = true)
     @GetMapping
     @Operation(summary = "다건 조회")
-    public List<PostDto> getItems() {
+    public List<PostWithAuthorDto> getItems() {
         List<Post> items = postService.getList();
 
         return items
                 .stream()
-                .map(PostDto::new) // postDto 변환
+                .map(PostWithAuthorDto::new) // postDto 변환
                 .toList();
     }
 
     @Transactional(readOnly = true)
     @GetMapping("/{id}")
     @Operation(summary = "단건 조회")
-    public PostDto getItem(@PathVariable long id) {
+    public PostWithAuthorDto getItem(@PathVariable long id) {
         Post item = postService.findById(id);
-        return new PostDto(item);
+        return new PostWithAuthorDto(item);
     }
 
     @Transactional
