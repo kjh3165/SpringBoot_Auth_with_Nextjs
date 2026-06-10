@@ -1,8 +1,11 @@
 'use client'
 
-import { apiFetch } from '@/lib/backend/client'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
+
+import Link from 'next/link'
+
+import { apiFetch } from '@/lib/backend/client'
+
 import { components } from '../../lib/backend/apiV1/schema.d'
 
 export default function Page() {

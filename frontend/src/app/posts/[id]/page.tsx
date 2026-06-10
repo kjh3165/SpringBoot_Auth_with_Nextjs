@@ -1,9 +1,12 @@
 'use client'
 
-import { apiFetch } from '@/lib/backend/client'
+import { use, useEffect, useState } from 'react'
+
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { use, useEffect, useState } from 'react'
+
+import { apiFetch } from '@/lib/backend/client'
+
 import { components } from '../../../lib/backend/apiV1/schema.d'
 
 export default function Page({ params }: { params: Promise<{ id: number }> }) {

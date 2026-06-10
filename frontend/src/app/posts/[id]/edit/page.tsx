@@ -1,9 +1,12 @@
 'use client'
 
-import { components } from '@/lib/backend/apiV1/schema'
-import { apiFetch } from '@/lib/backend/client'
-import { useRouter } from 'next/navigation'
 import { use, useEffect, useState } from 'react'
+
+import { useRouter } from 'next/navigation'
+
+import { apiFetch } from '@/lib/backend/client'
+
+import { components } from '@/lib/backend/apiV1/schema'
 
 export default function Page({ params }: { params: Promise<{ id: number }> }) {
   type PostDto = components['schemas']['PostWithAuthorDto']
