@@ -5,7 +5,7 @@ import { use, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-import { apiFetch, client } from '@/lib/backend/client'
+import { client } from '@/lib/backend/client'
 
 import { components } from '../../../lib/backend/apiV1/schema.d'
 
@@ -25,12 +25,22 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
   const deletePost = (id: number) => {
     if (!confirm('정말 삭제하시겠습니까?')) return
 
-    apiFetch(`/api/v1/posts/${id}`, {
-      method: 'DELETE',
-    }).then((data) => {
-      alert(data.msg)
-      router.replace('/posts')
-    })
+    client
+      .DELETE('/api/v1/posts/{id}', {
+        params: {
+          path: {
+            id,
+          },
+        },
+      })
+      .then((res) => {
+        if (res.error) {
+          alert(res.error.msg)
+          return
+        }
+        alert(res.data.msg)
+        router.replace('/posts')
+      })
   }
 
   const deletePostComment = (id: number, commentId: number) => {
