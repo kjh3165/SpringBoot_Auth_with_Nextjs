@@ -4,698 +4,698 @@
  */
 
 export interface paths {
-    "/api/v1/posts/{postId}/comments/{id}": {
+    '/api/v1/posts/{postId}/comments/{id}': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         /** 단건 조회 */
-        get: operations["getItem"];
+        get: operations['getItem']
         /** 수정 */
-        put: operations["modify"];
-        post?: never;
+        put: operations['modify']
+        post?: never
         /** 삭제 */
-        delete: operations["delete"];
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/posts/{id}": {
+        delete: operations['delete']
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/posts/{id}': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         /** 단건 조회 */
-        get: operations["getItem_1"];
+        get: operations['getItem_1']
         /** 수정 */
-        put: operations["modify_1"];
-        post?: never;
+        put: operations['modify_1']
+        post?: never
         /** 삭제 */
-        delete: operations["delete_1"];
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/posts": {
+        delete: operations['delete_1']
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/posts': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         /** 다건 조회 */
-        get: operations["getItems"];
-        put?: never;
+        get: operations['getItems']
+        put?: never
         /** 작성 */
-        post: operations["write"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/posts/{postId}/comments": {
+        post: operations['write']
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/posts/{postId}/comments': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         /** 다건 조회 */
-        get: operations["getItems_1"];
-        put?: never;
+        get: operations['getItems_1']
+        put?: never
         /** 작성 */
-        post: operations["write_1"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/members": {
+        post: operations['write_1']
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/members': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["join"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/members/login": {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get?: never
+        put?: never
+        post: operations['join']
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/members/login': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post: operations["login"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/members/me": {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get?: never
+        put?: never
+        post: operations['login']
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/members/me': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["me"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/adm/posts/count": {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get: operations['me']
+        put?: never
+        post?: never
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/adm/posts/count': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["count"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/adm/members": {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get: operations['count']
+        put?: never
+        post?: never
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/adm/members': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getItems_2"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/adm/members/{id}": {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get: operations['getItems_2']
+        put?: never
+        post?: never
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/adm/members/{id}': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get: operations["getItem_2"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/members/logout": {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get: operations['getItem_2']
+        put?: never
+        post?: never
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
+    '/api/v1/members/logout': {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post?: never;
-        delete: operations["logout"];
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        get?: never
+        put?: never
+        post?: never
+        delete: operations['logout']
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
 }
-export type webhooks = Record<string, never>;
+export type webhooks = Record<string, never>
 export interface components {
     schemas: {
         PostCommentModifyReqBody: {
-            content: string;
-        };
+            content: string
+        }
         RsDataVoid: {
-            resultCode?: string;
-            msg?: string;
-            data?: unknown;
-        };
+            resultCode?: string
+            msg?: string
+            data?: unknown
+        }
         PostModifyReqBody: {
-            title: string;
-            content: string;
-        };
+            title: string
+            content: string
+        }
         PostWriteReqBody: {
-            title: string;
-            content: string;
-        };
+            title: string
+            content: string
+        }
         PostDto: {
             /** Format: int64 */
-            id: number;
+            id: number
             /** Format: date-time */
-            createDate: string;
+            createDate: string
             /** Format: date-time */
-            modifyDate: string;
-            title: string;
-            content: string;
-        };
+            modifyDate: string
+            title: string
+            content: string
+        }
         RsDataPostDto: {
-            resultCode?: string;
-            msg?: string;
-            data?: components["schemas"]["PostDto"];
-        };
+            resultCode?: string
+            msg?: string
+            data?: components['schemas']['PostDto']
+        }
         PostCommentWriteReqBody: {
-            content: string;
-        };
+            content: string
+        }
         PostCommentDto: {
             /** Format: int64 */
-            id: number;
+            id: number
             /** Format: date-time */
-            createDate: string;
+            createDate: string
             /** Format: date-time */
-            modifyDate: string;
-            authorName: string;
-            content: string;
-        };
+            modifyDate: string
+            authorName: string
+            content: string
+        }
         RsDataPostCommentDto: {
-            resultCode?: string;
-            msg?: string;
-            data?: components["schemas"]["PostCommentDto"];
-        };
+            resultCode?: string
+            msg?: string
+            data?: components['schemas']['PostCommentDto']
+        }
         MemberJoinReqBody: {
-            username: string;
-            password: string;
-            nickname: string;
-        };
+            username: string
+            password: string
+            nickname: string
+        }
         MemberDto: {
             /** Format: int64 */
-            id: number;
+            id: number
             /** Format: date-time */
-            createDate: string;
+            createDate: string
             /** Format: date-time */
-            modifyDate: string;
-            nickname: string;
-        };
+            modifyDate: string
+            nickname: string
+        }
         RsDataMemberDto: {
-            resultCode?: string;
-            msg?: string;
-            data?: components["schemas"]["MemberDto"];
-        };
+            resultCode?: string
+            msg?: string
+            data?: components['schemas']['MemberDto']
+        }
         MemberLoginReqBody: {
-            username: string;
-            password: string;
-        };
+            username: string
+            password: string
+        }
         MemberLoginResBody: {
-            item: components["schemas"]["MemberDto"];
-            apiKey: string;
-            accessToken: string;
-        };
+            item: components['schemas']['MemberDto']
+            apiKey: string
+            accessToken: string
+        }
         RsDataMemberLoginResBody: {
-            resultCode?: string;
-            msg?: string;
-            data?: components["schemas"]["MemberLoginResBody"];
-        };
+            resultCode?: string
+            msg?: string
+            data?: components['schemas']['MemberLoginResBody']
+        }
         PostWithAuthorDto: {
             /** Format: int64 */
-            id: number;
+            id: number
             /** Format: date-time */
-            createDate: string;
+            createDate: string
             /** Format: date-time */
-            modifyDate: string;
+            modifyDate: string
             /** Format: int64 */
-            authorId: number;
-            authorName: string;
-            title: string;
-            content: string;
-            author: string;
-        };
+            authorId: number
+            authorName: string
+            title: string
+            content: string
+            author: string
+        }
         AdmPostCountResBody: {
             /** Format: int64 */
-            all: number;
-        };
+            all: number
+        }
         MemberWithUsernameDto: {
             /** Format: int64 */
-            id: number;
+            id: number
             /** Format: date-time */
-            createDate: string;
+            createDate: string
             /** Format: date-time */
-            modifyDate: string;
-            nickname: string;
-            username: string;
-        };
-    };
-    responses: never;
-    parameters: never;
-    requestBodies: never;
-    headers: never;
-    pathItems: never;
+            modifyDate: string
+            nickname: string
+            username: string
+        }
+    }
+    responses: never
+    parameters: never
+    requestBodies: never
+    headers: never
+    pathItems: never
 }
-export type $defs = Record<string, never>;
+export type $defs = Record<string, never>
 export interface operations {
     getItem: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                postId: number;
-                id: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
+                postId: number
+                id: number
+            }
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["PostCommentDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['PostCommentDto']
+                }
+            }
+        }
+    }
     modify: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                postId: number;
-                id: number;
-            };
-            cookie?: never;
-        };
+                postId: number
+                id: number
+            }
+            cookie?: never
+        }
         requestBody: {
             content: {
-                "application/json": components["schemas"]["PostCommentModifyReqBody"];
-            };
-        };
+                'application/json': components['schemas']['PostCommentModifyReqBody']
+            }
+        }
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataVoid"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataVoid']
+                }
+            }
+        }
+    }
     delete: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                postId: number;
-                id: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
+                postId: number
+                id: number
+            }
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataVoid"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataVoid']
+                }
+            }
+        }
+    }
     getItem_1: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                id: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
+                id: number
+            }
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["PostWithAuthorDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['PostWithAuthorDto']
+                }
+            }
+        }
+    }
     modify_1: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                id: number;
-            };
-            cookie?: never;
-        };
+                id: number
+            }
+            cookie?: never
+        }
         requestBody: {
             content: {
-                "application/json": components["schemas"]["PostModifyReqBody"];
-            };
-        };
+                'application/json': components['schemas']['PostModifyReqBody']
+            }
+        }
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataVoid"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataVoid']
+                }
+            }
+        }
+    }
     delete_1: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                id: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
+                id: number
+            }
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataPostDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataPostDto']
+                }
+            }
+        }
+    }
     getItems: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["PostWithAuthorDto"][];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['PostWithAuthorDto'][]
+                }
+            }
+        }
+    }
     write: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         requestBody: {
             content: {
-                "application/json": components["schemas"]["PostWriteReqBody"];
-            };
-        };
+                'application/json': components['schemas']['PostWriteReqBody']
+            }
+        }
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataPostDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataPostDto']
+                }
+            }
+        }
+    }
     getItems_1: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                postId: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
+                postId: number
+            }
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["PostCommentDto"][];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['PostCommentDto'][]
+                }
+            }
+        }
+    }
     write_1: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                postId: number;
-            };
-            cookie?: never;
-        };
+                postId: number
+            }
+            cookie?: never
+        }
         requestBody: {
             content: {
-                "application/json": components["schemas"]["PostCommentWriteReqBody"];
-            };
-        };
+                'application/json': components['schemas']['PostCommentWriteReqBody']
+            }
+        }
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataPostCommentDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataPostCommentDto']
+                }
+            }
+        }
+    }
     join: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         requestBody: {
             content: {
-                "application/json": components["schemas"]["MemberJoinReqBody"];
-            };
-        };
+                'application/json': components['schemas']['MemberJoinReqBody']
+            }
+        }
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataMemberDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataMemberDto']
+                }
+            }
+        }
+    }
     login: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
         requestBody: {
             content: {
-                "application/json": components["schemas"]["MemberLoginReqBody"];
-            };
-        };
+                'application/json': components['schemas']['MemberLoginReqBody']
+            }
+        }
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataMemberLoginResBody"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataMemberLoginResBody']
+                }
+            }
+        }
+    }
     me: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataMemberDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataMemberDto']
+                }
+            }
+        }
+    }
     count: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["AdmPostCountResBody"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['AdmPostCountResBody']
+                }
+            }
+        }
+    }
     getItems_2: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["MemberWithUsernameDto"][];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['MemberWithUsernameDto'][]
+                }
+            }
+        }
+    }
     getItem_2: {
         parameters: {
-            query?: never;
-            header?: never;
+            query?: never
+            header?: never
             path: {
-                id: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
+                id: number
+            }
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["MemberWithUsernameDto"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['MemberWithUsernameDto']
+                }
+            }
+        }
+    }
     logout: {
         parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        requestBody?: never
         responses: {
             /** @description OK */
             200: {
                 headers: {
-                    [name: string]: unknown;
-                };
+                    [name: string]: unknown
+                }
                 content: {
-                    "application/json;charset=UTF-8": components["schemas"]["RsDataVoid"];
-                };
-            };
-        };
-    };
+                    'application/json;charset=UTF-8': components['schemas']['RsDataVoid']
+                }
+            }
+        }
+    }
 }
