@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
-import { apiFetch } from '@/lib/backend/client'
+import { client } from '@/lib/backend/client'
 
 import { components } from '../../lib/backend/apiV1/schema.d'
 
@@ -14,8 +14,14 @@ export default function Page() {
   const [posts, setPosts] = useState<PostDto[] | null>(null)
 
   useEffect(() => {
-    // (data) => setPosts(data) == setPosts
-    apiFetch('/api/v1/posts').then(setPosts)
+    client.GET('/api/v1/posts').then((res) => {
+      if (res.error) {
+        alert(res.error.msg)
+        return
+      }
+
+      setPosts(res.data)
+    })
   }, [])
 
   if (posts === null) return <div>로딩중...</div>
