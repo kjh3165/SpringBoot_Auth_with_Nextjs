@@ -82,13 +82,19 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
       .GET('/api/v1/posts/{id}', {
         params: {
           path: {
-            id: id,
+            id,
           },
         },
       })
-      .then()
+      .then((res) => {
+        if (res.error) {
+          alert(res.error.msg)
+          return
+        }
 
-    apiFetch(`/api/v1/posts/${id}`).then(setPost)
+        setPost(res.data)
+      })
+
     apiFetch(`/api/v1/posts/${id}/comments`).then(setPostComments)
   }, [id])
 
