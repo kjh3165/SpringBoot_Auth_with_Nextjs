@@ -212,14 +212,13 @@ export interface components {
         };
         PostDto: {
             /** Format: int64 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            authorName?: string;
-            title?: string;
-            content?: string;
+            modifyDate: string;
+            title: string;
+            content: string;
         };
         RsDataPostDto: {
             resultCode?: string;
@@ -231,13 +230,13 @@ export interface components {
         };
         PostCommentDto: {
             /** Format: int64 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            authorName?: string;
-            content?: string;
+            modifyDate: string;
+            authorName: string;
+            content: string;
         };
         RsDataPostCommentDto: {
             resultCode?: string;
@@ -251,12 +250,12 @@ export interface components {
         };
         MemberDto: {
             /** Format: int64 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            nickname?: string;
+            modifyDate: string;
+            nickname: string;
         };
         RsDataMemberDto: {
             resultCode?: string;
@@ -268,9 +267,9 @@ export interface components {
             password: string;
         };
         MemberLoginResBody: {
-            item?: components["schemas"]["MemberDto"];
-            apiKey?: string;
-            accessToken?: string;
+            item: components["schemas"]["MemberDto"];
+            apiKey: string;
+            accessToken: string;
         };
         RsDataMemberLoginResBody: {
             resultCode?: string;
@@ -279,29 +278,31 @@ export interface components {
         };
         PostWithAuthorDto: {
             /** Format: int64 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            authorName?: string;
-            title?: string;
-            content?: string;
-            author?: string;
+            modifyDate: string;
+            /** Format: int64 */
+            authorId: number;
+            authorName: string;
+            title: string;
+            content: string;
+            author: string;
         };
         AdmPostCountResBody: {
             /** Format: int64 */
-            all?: number;
+            all: number;
         };
         MemberWithUsernameDto: {
             /** Format: int64 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            nickname?: string;
-            username?: string;
+            modifyDate: string;
+            nickname: string;
+            username: string;
         };
     };
     responses: never;

@@ -1,8 +1,10 @@
 package com.restapi.domain.member.member.dto;
 
+import org.springframework.lang.NonNull;
+
 public record MemberLoginResBody(
-        MemberDto item,
-        String apiKey,
-        String accessToken
+        @NonNull MemberDto item,
+        @NonNull String apiKey,
+        @NonNull String accessToken
 ) {
 }

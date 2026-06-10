@@ -1,6 +1,8 @@
 package com.restapi.domain.post.post.dto;
 
+import org.springframework.lang.NonNull;
+
 public record AdmPostCountResBody(
-        long all
+        @NonNull long all
 ) {
 }
