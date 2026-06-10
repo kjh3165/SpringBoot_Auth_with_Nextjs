@@ -75,19 +75,30 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
       return
     }
 
-    apiFetch(`/api/v1/posts/${id}/comments`, {
-      method: 'POST',
-      body: JSON.stringify({
-        content: contentInput.value,
-      }),
-    }).then((data) => {
-      alert(data.msg)
-      contentInput.value = ''
+    client
+      .POST('/api/v1/posts/{postId}/comments', {
+        params: {
+          path: {
+            postId: id,
+          },
+        },
+        body: {
+          content: contentInput.value,
+        },
+      })
+      .then((res) => {
+        if (res.error) {
+          alert(res.error.msg)
+          return
+        }
 
-      if (postComments == null) return
+        alert(res.data.msg)
+        contentInput.value = ''
 
-      setPostComments([...postComments, data.data])
-    })
+        if (postComments == null) return
+
+        setPostComments([...postComments, res.data.data])
+      })
   }
 
   useEffect(() => {
