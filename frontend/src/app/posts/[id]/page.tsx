@@ -5,7 +5,7 @@ import { use, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-import { apiFetch } from '@/lib/backend/client'
+import { apiFetch, client } from '@/lib/backend/client'
 
 import { components } from '../../../lib/backend/apiV1/schema.d'
 
@@ -78,6 +78,16 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
   }
 
   useEffect(() => {
+    client
+      .GET('/api/v1/posts/{id}', {
+        params: {
+          path: {
+            id: id,
+          },
+        },
+      })
+      .then()
+
     apiFetch(`/api/v1/posts/${id}`).then(setPost)
     apiFetch(`/api/v1/posts/${id}/comments`).then(setPostComments)
   }, [id])
