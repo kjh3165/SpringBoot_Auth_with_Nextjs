@@ -4,7 +4,7 @@ import { use, useEffect, useState } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-import { apiFetch } from '@/lib/backend/client'
+import { client } from '@/lib/backend/client'
 
 import { components } from '@/lib/backend/apiV1/schema'
 
@@ -38,20 +38,39 @@ export default function Page({ params }: { params: Promise<{ id: number }> }) {
       return
     }
 
-    apiFetch(`/api/v1/posts/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify({
-        title: titleInput.value,
-        content: contentInput.value,
-      }),
-    }).then((data) => {
-      alert(data.msg)
-      router.replace(`/posts/${id}`)
-    })
+    client
+      .PUT('/api/v1/posts/{id}', {
+        params: {
+          path: {
+            id,
+          },
+        },
+        body: {
+          title: titleInput.value,
+          content: contentInput.value,
+        },
+      })
+      .then((res) => {
+        if (res.error) {
+          alert(res.error.msg)
+          return
+        }
+
+        alert(res.data.msg)
+        router.replace(`/posts/${id}`)
+      })
   }
 
   useEffect(() => {
-    apiFetch(`/api/v1/posts/${id}`).then(setPost)
+    client
+      .GET('/api/v1/posts/{id}', {
+        params: {
+          path: {
+            id,
+          },
+        },
+      })
+      .then((res) => res.data && setPost(res.data))
   }, [id])
 
   if (post === null) return <div>로딩중...</div>
